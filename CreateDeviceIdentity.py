@@ -3,7 +3,7 @@ import iothub_service_client
 from iothub_service_client import IoTHubRegistryManager, IoTHubRegistryManagerAuthMethod
 from iothub_service_client import IoTHubDeviceStatus, IoTHubError
 
-CONNECTION_STRING = "HostName=gregsiothub01.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=GHT/TWPao3YuEHLB18L9+JckwW4neFt52mPGVo8TzCw="
+CONNECTION_STRING = "HostName=rbteam106iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=H1XANmW1PH2JjpZxbMhsZyILHrec/+yeeLu5GhWaBIo="
 DEVICE_ID = "GregsFirstPythonDevice"
 
 def print_device_info(title, iothub_device):

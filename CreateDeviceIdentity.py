@@ -32,7 +32,7 @@ def print_device_info(title, iothub_device):
     except KeyboardInterrupt:
         print ( "iothub_createdevice stopped" )
         
-  if __name__ == '__main__':
+if __name__ == '__main__':
     print ( "" )
     print ( "Python {0}".format(sys.version) )
     print ( "Creating device using the Azure IoT Hub Service SDK for Python" )

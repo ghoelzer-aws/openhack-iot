@@ -1,0 +1,10 @@
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\obj\Debug\netcoreapp2.0\FilterModule.csproj.CoreCompileInputs.cache
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\obj\Debug\netcoreapp2.0\FilterModule.AssemblyInfoInputs.cache
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\obj\Debug\netcoreapp2.0\FilterModule.AssemblyInfo.cs
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\bin\Debug\netcoreapp2.0\FilterModule.deps.json
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\bin\Debug\netcoreapp2.0\FilterModule.runtimeconfig.json
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\bin\Debug\netcoreapp2.0\FilterModule.runtimeconfig.dev.json
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\bin\Debug\netcoreapp2.0\FilterModule.dll
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\bin\Debug\netcoreapp2.0\FilterModule.pdb
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\obj\Debug\netcoreapp2.0\FilterModule.dll
+c:\Users\grhoelze\Projects\openhack-iot\FilterModule\obj\Debug\netcoreapp2.0\FilterModule.pdb

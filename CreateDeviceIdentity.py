@@ -19,7 +19,7 @@ def print_device_info(title, iothub_device):
     print ( "iothubDevice.authMethod                  = {0}".format(iothub_device.authMethod) )
     print ( "" )
     
- def iothub_createdevice():
+def iothub_createdevice():
     try:
         iothub_registry_manager = IoTHubRegistryManager(CONNECTION_STRING)
         auth_method = IoTHubRegistryManagerAuthMethod.SHARED_PRIVATE_KEY

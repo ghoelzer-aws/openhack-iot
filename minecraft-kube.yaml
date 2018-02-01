@@ -38,16 +38,12 @@ spec:
         name: minecraft-app-cntnr
         resources:
           requests:
-            cpu: "20m"
-            memory: "55M"
+            cpu: "1000m"
+            memory: "1024M"
         ports:
-        - containerPort:  27017
-          name:  heroes-db
-        volumeMounts:
-        - mountPath: /data
-          name: data
+        - containerPort:  25565
+          name:  tcp-25565
+        - containerPort:  25575
+          name:  tcp-25575
         imagePullPolicy: Always
-      volumes:
-        - name: data
-          emptyDir: {}
       restartPolicy: Always

@@ -19,9 +19,9 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name:  heroes-db-deploy
+  name: minecraft-app-deploy
   labels:
-    name:  heroes-db
+    name: minecraft-app
 spec:
   strategy:
     rollingUpdate:
@@ -31,13 +31,11 @@ spec:
   template:
     metadata:
       labels:
-        name:  heroes-db
+        name: minecraft-app
     spec:
-      imagePullSecrets:
-        - name: acr-secret
       containers:
-      - image:  <login server>/azureworkshop/rating-db:v1
-        name:  heroes-db-cntnr
+      - image: openhack/minecraft-server:1.0
+        name: minecraft-app-cntnr
         resources:
           requests:
             cpu: "20m"

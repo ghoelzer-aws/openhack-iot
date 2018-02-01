@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: azure-managed-disk
+  annotations:
+    volume.beta.kubernetes.io/storage-class: default
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: minecraft-app-deploy
+  labels:
+    name: minecraft-app
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name: minecraft-app
+    spec:
+      containers:
+      - image: openhack/minecraft-server:2.0
+        name: minecraft-app-cntnr
+        volumeMounts:
+        - mountPath: "/data"
+          name: data
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "1024M"
+        env:
+        - name:  EULA
+          value:  "true"
+        - name:  MOTD
+          value: "Yoshi helped get this done!"
+        ports:
+        - containerPort:  25565
+          name:  tcp-25565
+        - containerPort:  25575
+          name:  tcp-25575
+        imagePullPolicy: Always
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: azure-managed-disk
+      restartPolicy: Always

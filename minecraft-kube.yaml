@@ -38,8 +38,13 @@ spec:
         name: minecraft-app-cntnr
         resources:
           requests:
-            cpu: "1000m"
+            cpu: "100m"
             memory: "1024M"
+        env:
+        - name:  EULA
+          value:  "true"
+        - name:  MOTD
+          value: "Yoshi helped get this done!"
         ports:
         - containerPort:  25565
           name:  tcp-25565
